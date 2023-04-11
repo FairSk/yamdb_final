@@ -1,10 +1,14 @@
 import os
 from datetime import timedelta
 from pathlib import Path
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = '271571eb32bed612ac9cbf17adcd2fb33e0cff45365f88f2'
+SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY', default='fakekey'))
 
 DEBUG = True
 
@@ -59,8 +63,12 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': str(os.getenv('ENGINE', default='django.db.backends.postgresql')),
+        'NAME': str(os.getenv('ENGINE', default='db')),
+        'USER': str(os.getenv('ENGINE', default='postgres')),
+        'PASSWORD': str(os.getenv('ENGINE', default='postgres')),
+        'HOST': str(os.getenv('ENGINE', default='db')),
+        'PORT': str(os.getenv('ENGINE', default='5432'))
     }
 }
 
