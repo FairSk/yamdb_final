@@ -8,7 +8,6 @@ pytest-pythonpath==0.7.3
 djangorestframework-simplejwt==4.7.1
 django-filter==22.1
 gunicorn==20.0.4
-psycopg2-binary==2.8.6
 asgiref==3.3.2
 pytz==2020.1
 sqlparse==0.3.1
