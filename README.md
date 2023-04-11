@@ -3,7 +3,7 @@
 ### Описание проекта
 Проект YaMDb собирает отзывы пользователей и рейтинги произведений искусства. Произведение может иметь несколько жанров и одну категорию. Вы можете оставлять комментарии к отзывам. В проекте действует система модерации контента.
 
-[![](https://github.com/fairsk/api_yamdb/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/fairsk/api_yamdb/actions/workflows/yamdb_workflow.yml)
+![](https://github.com/FairSk/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Как запустить проект:
 Склонируйте репозиторию:
