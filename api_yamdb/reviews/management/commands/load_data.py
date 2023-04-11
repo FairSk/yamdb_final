@@ -13,21 +13,21 @@ class Command(BaseCommand):
 
     help = 'Команда для создания БД на основе имеющихся csv файлов'
 
-    def genre_create(row):
+    def genre_create(self, row):
         Genre.objects.create(
             id=row['id'],
             name=row['name'],
             slug=row['slug']
         )
 
-    def category_create(row):
+    def category_create(self, row):
         Category.objects.create(
             id=row['id'],
             name=row['name'],
             slug=row['slug']
         )
 
-    def title_create(row):
+    def title_create(self, row):
         Title.objects.create(
             id=row['id'],
             name=row['name'],
@@ -35,14 +35,14 @@ class Command(BaseCommand):
             category=Category.objects.get(id=row['category'])
         )
 
-    def genre_title_create(row):
+    def genre_title_create(self, row):
         Title.genres.through.objects.create(
             id=row['id'],
             title_id=row['title_id'],
             genre_id=row['genre_id']
         )
 
-    def user_create(row):
+    def user_create(self, row):
         User.objects.create(
             id=row['id'],
             username=row['username'],
@@ -53,7 +53,7 @@ class Command(BaseCommand):
             last_name=row['last_name']
         )
 
-    def comment_create(row):
+    def comment_create(self, row):
         Comment.objects.create(
             id=row['id'],
             review_id=row['review_id'],
@@ -62,7 +62,7 @@ class Command(BaseCommand):
             pub_date=['pub_date']
         )
 
-    def review_create(row):
+    def review_create(self, row):
         title, _ = Title.objects.get_or_create(id=row['title_id'])
         Review.objects.create(
             id=row['id'],
