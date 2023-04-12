@@ -10,9 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY', default='fakekey'))
 
-DEBUG = False
+DEBUG = str(os.getenv('DEBUG', default='False'))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = (os.getenv('DEBUG'))
 
 AUTH_USER_MODEL = 'reviews.User'
 
@@ -89,7 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -98,8 +98,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = ((BASE_DIR / 'static/'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 
