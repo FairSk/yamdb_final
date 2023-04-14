@@ -5,6 +5,10 @@
 
 ![](https://github.com/FairSk/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+### Документация:
+
+http://158.160.10.54/redoc/
+
 ### Как запустить проект:
 Склонируйте репозиторию:
 
