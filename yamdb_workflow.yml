@@ -1,5 +1,4 @@
-name: Django-app workflow
-
+name: Django-app workflow 2
 on: [push]
 
 jobs:
