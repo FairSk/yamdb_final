@@ -12,7 +12,7 @@ SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY', default='fakekey'))
 
 DEBUG = False
 
-ALLOWED_HOSTS = (os.getenv('DEBUG'))
+ALLOWED_HOSTS = [(os.getenv('ALLOWED_HOSTS'))]
 
 AUTH_USER_MODEL = 'reviews.User'
 
