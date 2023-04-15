@@ -13,3 +13,4 @@ pytz==2020.1
 sqlparse==0.3.1
 python-dotenv==0.21
 psycopg2-binary==2.8.6
+docker-compose==1.29.2
