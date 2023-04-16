@@ -14,7 +14,7 @@ services:
       - ./.env
 
   web:
-    image: faisk/yamdb_final
+    image: fairsk/yamdb_final
     restart: always
     volumes:
       - "static_value:/app/static"
